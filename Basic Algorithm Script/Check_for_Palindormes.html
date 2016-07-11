@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Check for Palindormes</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+		function palindrome(str) {
+		  // Good luck!
+
+
+		 
+
+		  //首先，将字符串中所有不是字母的都排除掉。注意。string.replace应该是生成新的string
+		  var i=0;
+		  	do{
+		  		var k=str.charCodeAt(i);
+		    	if ( k<48 || (k>57&&k<65) || (k>90 && k<97) || k>122 ){
+		      		str=str.replace(str.charAt(i),'');
+		      		i--;
+		    	}
+		    	i++;
+		  	}while(i<str.length)z
+
+		  
+		  //将字符串中的字母都变成小写,注意这里并不主动改变str的内容，而是生成新的str
+		  str=str.toLowerCase();
+		  
+		  //将字符串更改为数组，利用reserse函数将数组中的元素全部颠倒
+		  var strArr = str.split('');
+		  
+		  strArr.reverse();
+		  
+		  var str1=strArr.join("");
+		  
+		  if(str1===str){
+		    return true;
+		  }else{
+		    return false;
+		  }
+		  
+		}
+
+
+
+		palindrome("1 eye for of 1 eye.");
+	</script>
+</head>
+<body>
+
+</body>
+</html>
